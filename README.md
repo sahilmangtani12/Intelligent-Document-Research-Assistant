@@ -1,4 +1,4 @@
-# Marginalia: Intelligent Document Research Assistant
+# Intelligent Document Research Assistant
 
 Upload PDF, TXT and CSV files, then ask questions in plain English. Answers are generated **only from your documents** and every answer cites the page, row or passage it came from.
 
