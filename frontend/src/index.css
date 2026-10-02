@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* The class name `font-serif` is used across components for headings.
+     It now maps to a modern display sans so no component files need editing. */
+  --font-serif: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+  --color-navy: #4f46e5;        /* primary (indigo) */
+  --color-cite: #0f766e;        /* source / citation accent (teal) */
+  --color-cite-soft: #e6f6f4;
+}
+
+:root { color-scheme: light; }
+.dark {
+  color-scheme: dark;
+  --color-paper: #0b1020;
+  --color-surface: #131a2e;
+  --color-ink: #e6e9f5;
+  --color-muted: #94a3b8;
+  --color-line: #232c45;
+  --color-navy: #818cf8;
+  --color-cite: #2dd4bf;
+  --color-cite-soft: #10292b;
+}
+
+html, body, #root { height: 100%; }
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { letter-spacing: -0.01em; }
+:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+@keyframes dot { 0%, 80%, 100% { opacity: .25 } 40% { opacity: 1 } }
+.dot { animation: dot 1.2s infinite; }

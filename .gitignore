@@ -1,0 +1,25 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+
+# Runtime data: SQLite registry and Chroma vector store
+backend/data/*
+!backend/data/.gitkeep
+
+# OS / IDE (keep shared extension recommendations)
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
